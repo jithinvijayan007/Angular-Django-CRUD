@@ -1,0 +1,55 @@
+<h1 style="color:black; text-align:center;">Customer List</h1>
+<div class="container">
+  <div class="jumbotron">
+<table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Date of Birth</th>
+        <th>District</th>
+        <th>Detail</th>
+        <th>Update</th>
+        <th>Delete</th>
+        
+      </tr>
+      <tr *ngFor = "let user of data">
+        <td>{{ user.vchr_name }}</td>
+        <td>{{ user.vchr_gender }}</td>
+        <td>{{ user.dat_dob | date }}</td>
+        <td>{{ user.vchr_district }}</td>
+        <td><button (click)="Display(user.pk_bint_id)">Details</button></td>
+        <td><button (click)="Update(user.pk_bint_id)">Update</button></td>
+        <td><button (click)="Delete(user.pk_bint_id)">Delete</button></td>
+        
+      </tr>
+    </thead>
+  </table>
+  
+
+<div *ngIf = 'data_one'>
+  <h3>Deatails Here</h3>
+  <table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Date of Birth</th>
+      <th>District</th>
+      
+      
+    </tr>
+    <tr>
+  
+      <td>{{ data_one.vchr_name }}</td>
+      <td>{{ data_one.vchr_gender }}</td>
+      <td>{{ data_one.dat_dob | date }}</td>
+      <td>{{ data_one.vchr_district }}</td>
+
+      
+    </tr>
+  </thead>
+</table>
+</div>
+</div>
+</div>

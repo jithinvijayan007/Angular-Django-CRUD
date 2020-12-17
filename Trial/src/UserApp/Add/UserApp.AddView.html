@@ -1,0 +1,58 @@
+    <h1 style="color:black; text-align:center;">Register</h1>
+    <div class="container">
+      <div class="jumbotron">
+      
+      
+      <form class="" action="" method="post">
+        <div class="form-group">
+         <label for="UserName">Name:</label>
+         <input [(ngModel)]=UserModel.vchr_name type="text" name="UserName" class="form-control" value="" placeholder="Name">
+        </div>
+        <label for="gender">Gender:</label>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input [(ngModel)]=UserModel.vchr_gender type="radio" class="form-check-input" value="male" name="UserGender">Male
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input [(ngModel)]=UserModel.vchr_gender type="radio" class="form-check-input" value="female" name="UserGender">Female
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input [(ngModel)]=UserModel.vchr_gender type="radio" class="form-check-input" value="other" name="UserGender">Other
+          </label>
+        </div>
+        <p> </p>
+        <div class="form-group">
+          <label for="UserDob">D.O.B:</label>
+          <input [(ngModel)]=UserModel.dat_dob type="date" name="UserDob" value="" class="form-control">
+        </div>
+        <div class="form-group">
+           <label for="UserDistrict">Select District:</label>
+           <select [(ngModel)]=UserModel.vchr_district class="form-control" id="dis" name="UserDistrict">
+            <option value="Kazarkode">Kazarkode</option> 
+            <option value="Kannur">Kannur</option>
+             <option value="Kozhikode">Kozhikode</option>
+             <option value="Wayanad">Wayanad</option>
+             <option value="Malapuram">Malapuram</option>
+             <option value="Palakkad">Palakkad</option>
+             <option value="Thrissur">Thrissur</option>
+             <option value="Ernakulam">Ernakulam</option>
+             <option value="Idukki">Idukki</option>
+             <option value="Kotayam">Kotayam</option>
+             <option value="Alapuzha">Alapuzha</option>
+             <option value="Pathanamthitta">Pathanamthitta</option>
+             <option value="Kollam">Kollam</option>
+             <option value="Trivandrum">Trivandrum</option>
+             
+           </select>
+        </div>
+        <button (click)="Add()" type="submit" class="btn btn-primary">Submit</button><br>
+        
+
+        
+      </form>
+     </div>
+     </div>
